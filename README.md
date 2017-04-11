@@ -1,3 +1,3 @@
-#React-boilerplate-webpack2-jest
+# React-boilerplate-webpack2-jest
 
 Still in development
