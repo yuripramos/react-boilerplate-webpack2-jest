@@ -3,7 +3,6 @@ import HtmlWebpackPlugin from 'html-webpack-plugin';
 import FaviconsWebpackPlugin from 'favicons-webpack-plugin';
 import CleanWebpackPlugin from 'clean-webpack-plugin';
 import ExtractTextPlugin from 'extract-text-webpack-plugin';
-import OfflinePlugin from 'offline-plugin';
 import OptimizeCssAssetsPlugin from 'optimize-css-assets-webpack-plugin';
 import webpack from 'webpack';
 
@@ -18,8 +17,6 @@ const CleanPlugin = new CleanWebpackPlugin(['static']);
 const DefinePlugin = new webpack.DefinePlugin({
   'process.env': {
     NODE_ENV: JSON.stringify('production'),
-    STATICS_URL: JSON.stringify('https://dev.cityvoices.mobi/'),
-    API_URL: JSON.stringify(''),
   },
 });
 
@@ -65,8 +62,6 @@ const ProvidePlugin = new webpack.ProvidePlugin({
   jQuery: 'jquery',
 });
 
-const OfflinePluginConfig = new OfflinePlugin();
-
 const OptimizeCssAssets = new OptimizeCssAssetsPlugin({
   assetNameRegExp: /\.(css|scss)$/g,
   cssProcessorOptions: {
@@ -94,11 +89,11 @@ const FaviconPlugin = new FaviconsWebpackPlugin({
 
 const config = {
   entry: {
-    app: './src/App.js',
-    vendor: ['react', 'react-dom', 'react-router'],
+    app: './src/app/App.js',
+    vendor: ['react', 'react-dom'],
   },
   output: {
-    path: path.resolve(__dirname, 'static'),
+    path: path.join(__dirname, 'static'),
     filename: 'bundle.[chunkhash].js',
     chunkFilename: 'chunk.[chunkhash].js',
   },
@@ -144,7 +139,7 @@ const config = {
   },
   plugins: [CleanPlugin, DefinePlugin, HTMLWebpackPluginConfig, ExtractTextPluginCSS, UglifyPlugin,
     CommonChunksPlugin, ProvidePlugin, LoaderOptionsPlugin, AggressiveMergingPlugin,
-    FaviconPlugin, OptimizeCssAssets, OfflinePluginConfig],
+    FaviconPlugin, OptimizeCssAssets],
   devtool: 'source-map',
 };
 
