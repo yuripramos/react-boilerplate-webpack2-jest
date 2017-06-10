@@ -28,10 +28,6 @@ const DefinePlugin = new webpack.DefinePlugin({
   },
 });
 
-const ProvidePlugin = new webpack.ProvidePlugin({
-  $: 'jquery',
-  jQuery: 'jquery',
-});
 
 const FaviconPlugin = new FaviconsWebpackPlugin({
   logo: path.resolve(__dirname, 'src/assets/images/favicon.png'),
@@ -53,11 +49,15 @@ const config = {
   devServer: {
     inline: true,
     port: 8080,
+    host: '0.0.0.0',
     historyApiFallback: true,
   },
   entry: './src/app/App.js',
   output: {
-    filename: 'bundle.js',
+    path: path.join(__dirname, 'static'),
+    publicPath: '/',
+    filename: 'bundle.[hash].js',
+    chunkFilename: 'chunk.[hash].js',
   },
   module: {
     rules: [
@@ -90,7 +90,7 @@ const config = {
       },
     ],
   },
-  plugins: [CleanPlugin, HTMLWebpackPluginConfig, ExtractTextPluginCSS, ProvidePlugin, FaviconPlugin],
+  plugins: [CleanPlugin, HTMLWebpackPluginConfig, ExtractTextPluginCSS, FaviconPlugin],
   devtool: 'cheap-source-map',
 };
 

@@ -57,10 +57,6 @@ const LoaderOptionsPlugin = new webpack.LoaderOptionsPlugin({
   debug: false,
 });
 
-const ProvidePlugin = new webpack.ProvidePlugin({
-  $: 'jquery',
-  jQuery: 'jquery',
-});
 
 const OptimizeCssAssets = new OptimizeCssAssetsPlugin({
   assetNameRegExp: /\.(css|scss)$/g,
@@ -88,6 +84,12 @@ const FaviconPlugin = new FaviconsWebpackPlugin({
 });
 
 const config = {
+  resolve: {
+    alias: {
+      react: 'preact-compat',
+      'react-dom': 'preact-compat',
+    },
+  },
   entry: {
     app: './src/app/App.js',
     vendor: ['react', 'react-dom'],
@@ -138,7 +140,7 @@ const config = {
     ],
   },
   plugins: [CleanPlugin, DefinePlugin, HTMLWebpackPluginConfig, ExtractTextPluginCSS, UglifyPlugin,
-    CommonChunksPlugin, ProvidePlugin, LoaderOptionsPlugin, AggressiveMergingPlugin,
+    CommonChunksPlugin, LoaderOptionsPlugin, AggressiveMergingPlugin,
     FaviconPlugin, OptimizeCssAssets],
   devtool: 'source-map',
 };
