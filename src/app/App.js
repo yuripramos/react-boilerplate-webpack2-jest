@@ -11,7 +11,7 @@ class App extends React.Component {
     super(props);
     this.state = {
       name: 'Yuri',
-      lastname: 'Ramos',
+      lastname: 'Ramos'
     };
   }
   render() {
