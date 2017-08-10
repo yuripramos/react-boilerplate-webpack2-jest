@@ -5,6 +5,8 @@
 	"main": "/src/App.js",
 	"scripts": {
 		"test": "jest",
+		"test:watch": "jest --watch",
+		"test:coverage": "jest --coverage",
 		"start": "npm run dev",
 		"lint": "eslint src",
 		"dev": "webpack-dev-server --port 3000 --inline --hot",
