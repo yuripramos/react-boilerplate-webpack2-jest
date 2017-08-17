@@ -1,5 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
+
 import ComponentA from './ComponentA.js';
 
 describe('rendering tests', () => {

@@ -4,9 +4,9 @@
 	"description": "React App Boilerplate with snapshot tests",
 	"main": "/src/App.js",
 	"scripts": {
-		"test": "jest",
-		"test:watch": "jest --watch",
-		"test:coverage": "jest --coverage",
+		"test": "export NODE_ENV=testing && jest",
+		"test:watch": "export NODE_ENV=testing && jest --watch",
+		"test:coverage": "export NODE_ENV=testing && jest --coverage",
 		"start": "npm run dev",
 		"lint": "eslint src",
 		"dev": "webpack-dev-server --port 3000 --inline --hot",
@@ -28,10 +28,10 @@
 		"querystringify": "^0.0.4",
 		"react": "^15.4.2",
 		"react-addons-test-utils": "^15.4.2",
-		"react-test-renderer": "15.4.2",
 		"react-dom": "^15.1.0",
 		"react-fontawesome": "^1.5.0",
 		"react-router": "^2.0.0",
+		"react-test-renderer": "15.4.2",
 		"webpack": "^2.3.3"
 	},
 	"devDependencies": {
@@ -52,6 +52,7 @@
 		"eslint-plugin-react": "^6.2.0",
 		"file-loader": "^0.9.0",
 		"help": "^3.0.2",
+		"identity-obj-proxy": "^3.0.0",
 		"jest": "^19.0.2",
 		"jsdom": "^9.12.0",
 		"node-sass": "^4.3.0",
@@ -62,5 +63,13 @@
 		"uglifyjs-webpack-plugin": "^0.4.1",
 		"url-loader": "^0.5.9",
 		"webpack-dev-server": "^1.16.2"
-	}
+	},
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(css|less|scss)$": "<rootDir>/assetsTransformer.js"
+    },
+    "transform": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/assetsTransformer.js"
+    }
+  }
 }
