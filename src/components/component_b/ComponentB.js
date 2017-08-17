@@ -1,23 +1,38 @@
 import React, { Component } from "react";
+import PropTypes from 'prop-types';
 import style from "./style.scss";
 
-const ComponentB = ({lastname}) => {
+class ComponentB extends Component {
+	constructor(props) {
+		super(props);
+		this.state = {
+			state1: false,
+		};
+	}
 
-	return (
-		<div className={`${style.container} row`} >
-			<div className ="col-12">
-				<p> {`${lastname} don't forget the component B`} </p>
-				<p> {`${lastname} don't forget the component B`} </p>
-				<p> {`${lastname} don't forget the component B`} </p>
-				<p> {`${lastname} don't forget the component B`} </p>
-				<p> {`${lastname} don't forget the component B`} </p>
-				<p> {`${lastname} don't forget the component B`} </p>
-				<p> {`${lastname} don't forget the component B`} </p>
-				<p> {`${lastname} don't forget the component B`} </p>
-				<p> {`${lastname} don't forget the component B`} </p>
+	render() {
+		const { lastname } = this.props;
+		return (
+			<div className={`${style.container} row`} >
+				<div className="col-12">
+					<p> {`${lastname} don't forget the component B`} </p>
+					<p> {`${lastname} don't forget the component B`} </p>
+					<p> {`${lastname} don't forget the component B`} </p>
+					<p> {`${lastname} don't forget the component B`} </p>
+					<p> {`${lastname} don't forget the component B`} </p>
+					<p> {`${lastname} don't forget the component B`} </p>
+					<p> {`${lastname} don't forget the component B`} </p>
+					<p> {`${lastname} don't forget the component B`} </p>
+					<p> {`${lastname} don't forget the component B`} </p>
+				</div>
 			</div>
-		</div>
-	);
+		);
+	}
 }
 
 export default ComponentB;
+
+
+ComponentB.propTypes = {
+	lastname: PropTypes.string,
+};

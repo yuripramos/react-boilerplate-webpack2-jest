@@ -6,31 +6,31 @@ import ComponentA from "../components/component_a/ComponentA.js";
 import ComponentB from "../components/component_b/ComponentB.js";
 
 
-class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      name: 'Yuri',
-      lastname: 'Ramos'
-    };
-  }
-  render() {
-    return (
-      <div>
-        <div className="container">
-          <div className="row">
-            <div className="col-6 text-center">
-              <ComponentA name={this.state.name} />
-            </div>
-            <div className="col-6 text-center">
-              <ComponentB lastname={this.state.lastname} />
-            </div>
-          </div>
-        </div>
-        <Footer />
-      </div>
-    );
-  }
+class App extends Component {
+	constructor(props) {
+		super(props);
+		this.state = {
+			name: 'Yuri',
+			lastname: 'Ramos',
+		};
+	}
+	render() {
+		return (
+			<div>
+				<div className="container">
+					<div className="row">
+						<div className="col-6 text-center">
+							<ComponentA name={this.state.name} />
+						</div>
+						<div className="col-6 text-center">
+							<ComponentB lastname={this.state.lastname} />
+						</div>
+					</div>
+				</div>
+				<Footer />
+			</div>
+		);
+	}
 }
 
 
