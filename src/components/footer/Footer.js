@@ -1,17 +1,14 @@
-import React, { Component } from "react";
+import React from "react";
 import style from "./style.scss";
 
-
-class Footer extends React.Component {
-	render(){
-		return (
-			<footer className={`${style.container} row`}>
-			      <div className="container">
-						<p className={`${style.highlight1} text-center`}> Footer Footer Footer </p>
-			      </div>
-			</footer>
-		);
-	}
-}
+const Footer = () => {
+	return (
+		<footer className={`${style.footer}`}>
+			<div className="container">
+				<p className="text-muted">Place sticky footer content here.</p>
+			</div>
+		</footer>
+	);
+};
 
 export default Footer;

@@ -12,12 +12,11 @@ ShallowWrapper {
     className="container row"
 >
     <div
-        className="col-lg-12 col-md-12 col-sm-12"
+        className="col-12"
     >
-        <p>
-             
-            Hey undefined I'm your Component A
-        </p>
+        <h1>
+             React JW2 boilerplate 
+        </h1>
     </div>
 </div>,
   "nodes": Array [
@@ -25,12 +24,11 @@ ShallowWrapper {
       className="container row"
 >
       <div
-            className="col-lg-12 col-md-12 col-sm-12"
+            className="col-12"
       >
-            <p>
-                   
-                  Hey undefined I'm your Component A
-            </p>
+            <h1>
+                   React JW2 boilerplate 
+            </h1>
       </div>
 </div>,
   ],
@@ -38,20 +36,17 @@ ShallowWrapper {
   "renderer": ReactShallowRenderer {
     "_instance": ShallowComponentWrapper {
       "_calledComponentWillUnmount": false,
-      "_compositeType": 2,
+      "_compositeType": 0,
       "_context": Object {},
-      "_currentElement": <ComponentA
-        lastname="State 1"
-/>,
+      "_currentElement": <Header />,
       "_debugID": 1,
       "_hostContainerInfo": null,
       "_hostParent": null,
-      "_instance": StatelessComponent {
+      "_instance": Header {
         "_reactInternalInstance": [Circular],
         "context": Object {},
-        "props": Object {
-          "lastname": "State 1",
-        },
+        "handleIncreaseScore": [Function],
+        "props": Object {},
         "refs": Object {},
         "state": null,
         "updater": Object {
@@ -76,12 +71,11 @@ ShallowWrapper {
           className="container row"
 >
           <div
-                    className="col-lg-12 col-md-12 col-sm-12"
+                    className="col-12"
           >
-                    <p>
-                               
-                              Hey undefined I'm your Component A
-                    </p>
+                    <h1>
+                               React JW2 boilerplate 
+                    </h1>
           </div>
 </div>,
         "_debugID": 2,
@@ -89,12 +83,11 @@ ShallowWrapper {
           className="container row"
 >
           <div
-                    className="col-lg-12 col-md-12 col-sm-12"
+                    className="col-12"
           >
-                    <p>
-                               
-                              Hey undefined I'm your Component A
-                    </p>
+                    <h1>
+                               React JW2 boilerplate 
+                    </h1>
           </div>
 </div>,
       },
@@ -108,8 +101,6 @@ ShallowWrapper {
     "render": [Function],
   },
   "root": [Circular],
-  "unrendered": <ComponentA
-    lastname="State 1"
-/>,
+  "unrendered": <Header />,
 }
 `;

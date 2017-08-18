@@ -13,7 +13,6 @@ const ComponentA = ({ name }) => {
 	);
 };
 
-
 ComponentA.propTypes = {
 	name: PropTypes.string,
 };

@@ -1,8 +1,13 @@
+html {
+  min-height: 100%;
+  position: relative;
+  color: #fff;
+}
+
 html, body{
   margin:0;
   padding:0;
-  background:rgba(121,12,12,0.05);
   overflow-x:hidden !important;
+  min-height: 100%;
+  background: rgba(84, 16, 16, 0.66);
 }
-
-

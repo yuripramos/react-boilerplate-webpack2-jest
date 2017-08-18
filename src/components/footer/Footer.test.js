@@ -1,15 +1,11 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import ComponentA from './componentA.js';
-
-const props = {
-	lastname: "State 1",
-};
+import Footer from './Footer.js';
 
 describe('rendering tests', () => {
 	it('rendering correctly', () => {
-		const component = shallow(<ComponentA {...props} />);
+		const component = shallow(<Footer />);
 		expect(component).toMatchSnapshot();
 	});
 });

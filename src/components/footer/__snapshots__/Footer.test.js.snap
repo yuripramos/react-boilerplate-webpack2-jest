@@ -8,31 +8,33 @@ ShallowWrapper {
     "findWhereUnwrapped": [Function],
   },
   "length": 1,
-  "node": <div
-    className="container row"
+  "node": <footer
+    className="footer"
 >
     <div
-        className="col-lg-12 col-md-12 col-sm-12"
+        className="container"
     >
-        <p>
-             
-            Hey undefined I'm your Component A
+        <p
+            className="text-muted"
+        >
+            Place sticky footer content here.
         </p>
     </div>
-</div>,
+</footer>,
   "nodes": Array [
-    <div
-      className="container row"
+    <footer
+      className="footer"
 >
       <div
-            className="col-lg-12 col-md-12 col-sm-12"
+            className="container"
       >
-            <p>
-                   
-                  Hey undefined I'm your Component A
+            <p
+                  className="text-muted"
+            >
+                  Place sticky footer content here.
             </p>
       </div>
-</div>,
+</footer>,
   ],
   "options": Object {},
   "renderer": ReactShallowRenderer {
@@ -40,18 +42,14 @@ ShallowWrapper {
       "_calledComponentWillUnmount": false,
       "_compositeType": 2,
       "_context": Object {},
-      "_currentElement": <ComponentA
-        lastname="State 1"
-/>,
+      "_currentElement": <Footer />,
       "_debugID": 1,
       "_hostContainerInfo": null,
       "_hostParent": null,
       "_instance": StatelessComponent {
         "_reactInternalInstance": [Circular],
         "context": Object {},
-        "props": Object {
-          "lastname": "State 1",
-        },
+        "props": Object {},
         "refs": Object {},
         "state": null,
         "updater": Object {
@@ -72,31 +70,33 @@ ShallowWrapper {
       "_pendingReplaceState": false,
       "_pendingStateQueue": null,
       "_renderedComponent": NoopInternalComponent {
-        "_currentElement": <div
-          className="container row"
+        "_currentElement": <footer
+          className="footer"
 >
           <div
-                    className="col-lg-12 col-md-12 col-sm-12"
+                    className="container"
           >
-                    <p>
-                               
-                              Hey undefined I'm your Component A
+                    <p
+                              className="text-muted"
+                    >
+                              Place sticky footer content here.
                     </p>
           </div>
-</div>,
+</footer>,
         "_debugID": 2,
-        "_renderedOutput": <div
-          className="container row"
+        "_renderedOutput": <footer
+          className="footer"
 >
           <div
-                    className="col-lg-12 col-md-12 col-sm-12"
+                    className="container"
           >
-                    <p>
-                               
-                              Hey undefined I'm your Component A
+                    <p
+                              className="text-muted"
+                    >
+                              Place sticky footer content here.
                     </p>
           </div>
-</div>,
+</footer>,
       },
       "_renderedNodeType": 0,
       "_rootNodeID": 0,
@@ -108,8 +108,6 @@ ShallowWrapper {
     "render": [Function],
   },
   "root": [Circular],
-  "unrendered": <ComponentA
-    lastname="State 1"
-/>,
+  "unrendered": <Footer />,
 }
 `;
