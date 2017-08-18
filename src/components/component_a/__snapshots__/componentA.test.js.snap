@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`rendering tests renders correctly 1`] = `
+<div
+  className="container row"
+>
+  <div
+    className="col-lg-12 col-md-12 col-sm-12"
+  >
+    <p>
+       
+      Hey undefined I'm your Component A
+    </p>
+  </div>
+</div>
+`;

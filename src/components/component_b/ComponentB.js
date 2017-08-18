@@ -9,6 +9,7 @@ class ComponentB extends Component {
 		this.state = {
 			state1: false,
 		};
+		console.log(props);
 	}
 
 	render() {
