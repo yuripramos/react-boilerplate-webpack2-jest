@@ -4,8 +4,8 @@ import { shallow } from 'enzyme';
 import Footer from './Footer.js';
 
 describe('rendering tests', () => {
-	it('rendering correctly', () => {
-		const component = shallow(<Footer />);
-		expect(component).toMatchSnapshot();
-	});
+  it('rendering correctly', () => {
+    const component = shallow(<Footer />);
+    expect(component).toMatchSnapshot();
+  });
 });
